@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_library().
+ */
+function dragula_library() {
+  $path = drupal_get_path('module', 'dragula');
+  $opts = ['type'  => 'file', 'media' => 'screen'];
+
+  return [
+    'dragula' => [
+      'title'     => 'Dragula',
+      'version'   => '3.7.2',
+      'homepage'  => "https://bevacqua.github.io/dragula/",
+      'js'        => [$path . '/dragula-3.7.2/dist/dragula.min.js' => []],
+      'css'       => [$path . '/dragula.css' => $opts],
+    ],
+  ];
+}
